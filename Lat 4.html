@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlanetByGemash</title>
+  <link rel="stylesheet" href="style lat4.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">SiGemash</a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#planet">Planet</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="856309-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="" class="hero-logo">
+      <h1>Conquer The Universe</h1>
+      <p> <p class="news-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></p>
+      <a href="#" class="btn-cta">More Info</a>
+    </div>
+  </section>
+
+  <!-- LATEST NEWS -->
+  <section class="latest-news fade-element section-with-video" id="news">
+    <video autoplay muted loop playsinline class="section-video">
+      <source src="5986701-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <h2>Latest News</h2>
+      <div class="news-grid">
+        <article class="news-card fade-element">
+          <img src="escapade1.jpg" alt="">
+          <div class="news-body">
+            <h3>NASA, Blue Origin Invite Media to Attend Mars Mission Launch</h3>
+          
+          </div>
+        </article>
+        <article class="news-card fade-element">
+          <img src="WISPIT 2 b Wide Final.jpg" alt="">
+          <div class="news-body">
+            <h3>Discovery Alert: Baby Planet Photographed in a Ring around a Star for the First Time! </h3>
+          
+          </div>
+        </article>
+        <article class="news-card fade-element">
+          <img src="jsc2023e006587.jpg" alt="">
+          <div class="news-body">
+            <h3>Astronaut Candidates Get to Work at Johnson Space Center</h3>
+        
+          </div>
+        </article>
+      </div>
+      <p class="news-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </section>
+
+  <!-- UPCOMING EVENTS -->
+  <section class="events fade-element section-with-video" id="planet">
+    <video autoplay muted loop playsinline class="section-video">
+      <source src="5986701-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <h2>About Planet</h2>
+      <div class="events-grid">
+        <article class="event-card">
+          <img src="merkurius2.jpg" alt="The International">
+          <h3>Mercury</h3>
+      
+        </article>
+        <article class="event-card">
+          <img src="venus.jpg" alt="Regional Qualifiers">
+          <h3>Venus</h3>
+        
+        </article>
+        <article class="event-card">
+          <img src="bumi.jpg" alt="New Hero Launch">
+          <h3>Earth</h3>
+          
+        </article>
+        <article class="event-card">
+          <img src="mars.jpg" alt="Esports Cup">
+          <h3>Mars</h3>
+         
+        </article>
+        <article class="event-card">
+          <img src="jupiter.jpg" alt="Dota 2 Minor">
+          <h3>Jupiter</h3>
+        
+        </article>
+        <article class="event-card">
+          <img src="saturnus.jpg" alt="Dota 2 Major">
+          <h3>Saturn</h3>
+          
+        </article>
+        <article class="event-card">
+          <img src="uranus.jpg" alt="Showmatch">
+          <h3>Uranus</h3>
+          
+        </article>
+        <article class="event-card">
+          <img src="neptunus.jpg" alt="Community Cup">
+          <h3>Neptune</h3>
+          
+        </article>
+      </div>
+       <p class="news-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="cta container fade-element" id="contact">
+    <h2>Contact Us</h2>
+    <a href="mailto:example@email.com" class="btn-cta">Send Email</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer fade-element">
+    <div class="container footer-inner">
+      <p>© 2025 Dota2 Clone. All rights reserved.</p>
+      <nav class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- SCROLL ANIMATION -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, {threshold: 0.2});
+
+    document.querySelectorAll('.fade-element').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
