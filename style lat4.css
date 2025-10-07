@@ -5,7 +5,6 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -38,7 +37,7 @@ html {
   width: 120px;
 }
 
-/* SECTION VIDEO */
+/* SECTION VIDEO (untuk Latest News & Planet) */
 .section-with-video {
   position: relative;
   overflow: hidden;
@@ -74,18 +73,120 @@ html {
   transform: translateY(0);
 }
 
-/* CARD STYLE FIX */
+/* CARD STYLE DASAR */
 .card {
   border: none;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+/* ACTIVE MENU */
+.nav-link.active {
+  color: #dc3545 !important;
+  font-weight: bold;
+  border-bottom: 2px solid #dc3545;
 }
 
 /* FOOTER */
 .footer {
   background: #111;
+}
+
+/* ==== LATEST NEWS & PLANET CARD GRID ==== */
+
+/* Pastikan semua card sejajar dan sama tinggi */
+.latest-news .card,
+.events .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Gambar dalam card disesuaikan agar proporsional dan seragam */
+.latest-news .card img,
+.events .card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Container grid antar card lebih rapi */
+.latest-news .row,
+.events .row {
+  justify-content: center;
+}
+
+/* Spasi antar card lebih konsisten */
+.latest-news .card,
+.events .card {
+  margin: auto;
+  max-width: 100%;
+}
+
+/* Untuk tampilan grid planet dua baris sejajar */
+@media (min-width: 768px) {
+  .events .col-md-3 {
+    display: flex;
+  }
+}
+
+/* Rapi dan seimbang antar baris */
+.events .event-card {
+  width: 100%;
+  height: 100%;
+}
+
+/* Card body untuk teks planet & news */
+.events .card-body h3,
+.latest-news .card-body h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Tambahkan jarak antara section Planet dan News */
+#planet {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#news {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Tambahan biar grid tetap center */
+.latest-news .container,
+.events .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==== HOVER EFFECT TAMBAHAN ==== */
+.latest-news .card:hover img,
+.events .card:hover img {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  transition: all 0.4s ease;
+}
+.latest-news .card img,
+.events .card img {
+  transition: all 0.4s ease;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .latest-news .card img,
+  .events .card img {
+    height: 160px;
+  }
+  .events .card-body h3,
+  .latest-news .card-body h3 {
+    font-size: 1rem;
+  }
 }
